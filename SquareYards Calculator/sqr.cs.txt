@@ -1,0 +1,36 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class Carpet
+{
+    public string Color { get; }
+    public decimal PricePerSqYard { get; }
+    public decimal NoOfSqYards { get; set; }
+
+    public Carpet(string color, decimal pricePerSqYard, decimal noOfSqYards)
+    {
+        Color = color;
+        PricePerSqYard = pricePerSqYard;
+        NoOfSqYards = noOfSqYards;
+    }
+
+    public decimal CalculateCost()
+    {
+        return PricePerSqYard * NoOfSqYards;
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Carpet berber = new Carpet("Beige", 25.99m, 30);
+        Console.WriteLine($"Before: NoOfSqYards = {berber.NoOfSqYards}");
+        berber.NoOfSqYards = 45;
+        Console.WriteLine($"After: NoOfSqYards = {berber.NoOfSqYards}");
+        decimal cost = berber.CalculateCost();
+        Console.WriteLine($"Total cost: ${cost}");
+    }
+}
