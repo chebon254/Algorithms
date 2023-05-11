@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_excel("KUZA Registration Data.xlsx")
 
 # Remove duplicates based on columns A, B, and C
-df = df.drop_duplicates(subset=["1. Your Name", "2. Phone Number", "3. Are you born again?", "4. Do you prefer a physical or online meeting", "5. Which day do you prefer", "6. What time do you prefer?"])
+df = df.drop_duplicates(subset=["2. Phone Number", "3. Are you born again?", "4. Do you prefer a physical or online meeting", "5. Which day do you prefer", "6. What time do you prefer?"])
 
 # print(df.columns)
 
